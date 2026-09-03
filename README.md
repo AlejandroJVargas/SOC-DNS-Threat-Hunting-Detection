@@ -80,4 +80,3 @@ sourcetype="zeek_dns" "NXDOMAIN" NOT "#*"
 
 **Findings:** The host **192.168.202.140** generated queries with a length of (**51 characters**) targeting (**versioncheck.addons.mozilla.org.hsd1.md.comcast.net**) (16 times). While the query length triggers the exfiltration rule, investigation reveals this is a False Positive. The traffic consists of a legitimate Mozilla Firefox update check that failed and was subsequently appended with the local ISP DNS search suffix (Comcast). This highlights the importance of tuning SIEM detection rules to whitelist known local search domains.
 
-**Full Incident Report:** [View PDF Document](docs/incident_response.pdf)
